@@ -15,7 +15,7 @@ model = joblib.load("rfc_model.joblib")
 
 st.subheader("Please select your relevant features!")
 
-input_st = st.slider('Student Type(ST)', 0.0, max(data["StudentType(ST)"]), 1.0)
+input_st = st.slider('Student Type(ST)', 0.0, max(data["StudentType(ST)"]), 2.0)
 input_wh = st.slider('Withdrawal History(WH)', 0.0, max(data["Withdrawal History(WH)"]), 1.0)
 input_es = st.slider('Employment Status(ES)', 0.0, max(data["EmploymentStatus(ES)"]), 1.0)
 
