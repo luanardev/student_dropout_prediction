@@ -7,7 +7,7 @@ st.header("Student Dropout Prediction")
 
 st.text_input("Enter your Name: ", key="name")
 
-data = pd.read_csv("processed_data.csv")
+data = pd.read_csv("students_dataset.csv")
 
 # load model
 model = joblib.load("rfc_model.joblib")
