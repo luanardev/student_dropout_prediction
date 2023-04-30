@@ -16,16 +16,15 @@ rfc_model = joblib.load("rfc_model.joblib")
 pred = rfc_model.predict(X_train)
 
 # %%
-print("===== Test Data ===== \n")
-testData = [[1, 3, 0]]
-print(testData)
+# test data 
+inputs = np.expand_dims([1,1,1],0)
 
 print("===== Predicting ==== \n")
-prediction = rfc_model.predict(testData)
+prediction = rfc_model.predict(inputs)
 
-print("final prediction", np.squeeze(prediction, -1))
+print("Predicted Target = ", np.squeeze(prediction, -1))
 
 if prediction == 1:
-    print("Student is not likely to dropout")
-elif prediction == 0:
     print("Student is likely to dropout")
+elif prediction == 0:
+    print("Student is not likely to dropout")
