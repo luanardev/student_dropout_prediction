@@ -12,9 +12,9 @@ model = joblib.load("rfc_model.joblib")
 
 st.subheader("Please select your relevant features!")
 
-input_st = st.selectBox('What is your student type ?', ('Generic', 'Matured'))
-input_es = st.selectBox('Are you working or doing business ?', ('Yes', 'No'))
-input_wh = st.selectBox('Did you had any withdrawal in the past ?', ('Yes', 'No'))
+input_st = st.selectBox('What is your student type ?', ("Generic", "Matured"))
+input_es = st.selectBox('Are you working or doing business ?', ("Yes", "No"))
+input_wh = st.selectBox('Did you had any withdrawal in the past ?', ("Yes", "No"))
 
 if st.button('Make Prediction'):
     inputs = np.expand_dims([input_st, input_wh, input_es], 0)
