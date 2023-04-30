@@ -2,7 +2,6 @@ import joblib
 import streamlit as st
 import pandas as pd
 import numpy as np
-import load_data
 
 st.header("Student Dropout Prediction")
 st.subheader("Please select your features!")
