@@ -7,16 +7,14 @@ st.header("Student Dropout Prediction")
 
 st.text_input("Enter your Name: ", key="name")
 
-data = pd.read_csv("students_dataset.csv")
-
 # load model
 model = joblib.load("rfc_model.joblib")
 
 st.subheader("Please select your relevant features!")
 
-input_st = st.selectBox('What is your student type ?', data["StudentType(ST)"])
-input_es = st.selectBox('What is your employment status ?', data["EmploymentStatus(ES)"])
-input_wh = st.selectBox('Did you had any withdrawal in the past ?', data["WithdrawalHistory(WH)"])
+input_st = st.selectBox('What is your student type ?', ('Generic', 'Matured'))
+input_es = st.selectBox('Are you working or doing business ?', ('Yes', 'No'))
+input_wh = st.selectBox('Did you had any withdrawal in the past ?', ('Yes', 'No'))
 
 if st.button('Make Prediction'):
     inputs = np.expand_dims([input_st, input_wh, input_es], 0)
