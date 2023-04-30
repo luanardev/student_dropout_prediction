@@ -1,4 +1,4 @@
-WithdrawalHistory(WH),RepeatHistory(RH),MaritalStatus(MS),Gender(GND),Age,District(DSRCT),Religion(RLGN),StudentType(ST),ProgrammeCode(PC),EmplymentStatus(ES),ODLCenter(OC),DisabilityIndicator(DI),Vulnarability(VNBLT),IncomeSource(IS),CurrentResidence(CR),Target
+WithdrawalHistory(WH),RepeatHistory(RH),MaritalStatus(MS),Gender(GND),Age,District(DSRCT),Religion(RLGN),StudentType(ST),ProgrammeCode(PC),EmploymentStatus(ES),ODLCenter(OC),DisabilityIndicator(DI),Vulnarability(VNBLT),IncomeSource(IS),CurrentResidence(CR),Target
 No,Yes,SINGLE,M,25,MANGOCHI,Islam,GENERIC,BABM,Not Employed,BLANTYRE,,,,,Dropped
 No,No,SINGLE,M,32,NTCHISI,Christian,GENERIC,BAAE,Employed,MZUZU,,,,,Not Dropped
 Yes,Yes,SINGLE,M,27,KARONGA,Christian,GENERIC,BEXT,Not Employed,BLANTYRE,,,,,Dropped
