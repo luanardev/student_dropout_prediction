@@ -29,7 +29,7 @@ def process(csv_file):
         df.fillna(0, inplace=True)
         df._convert(numeric=True)
 
-        df = _convert_data(df)
+        df = convert_data(df)
 
         # drop columns below correlation below threshold of 0.2
         df.drop(
@@ -40,7 +40,7 @@ def process(csv_file):
         return "processed_data.csv"
 
 
-def _convert_data(df):
+def convert_data(df):
     cols = df.columns.values
     for col in cols:
         text_digit_vals = {}
