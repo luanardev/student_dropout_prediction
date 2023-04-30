@@ -9,7 +9,7 @@ st.header("Student Dropout Prediction")
 # load model
 model = joblib.load("rfc_model.joblib")
 
-st.subheader("Please select your relevant features!")
+st.subheader("Please select your features!")
 
 # get user input
 input_student_type = st.selectbox('What is your student type ? 1=Matured, 2=Generic', [1, 2])
