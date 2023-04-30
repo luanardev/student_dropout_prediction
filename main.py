@@ -16,7 +16,7 @@ input_student_type = st.selectbox('What is your student type ?', STUDENTTYPE.key
 input_employment = st.selectbox('Are you working or doing business ?', EMPLOYMENT.keys(), format_func=lambda x:EMPLOYMENT[ x ])
 input_withdrawal = st.selectbox('Did you withdrawal in the past ?', WITHDRAWAL.keys(), format_func=lambda x:WITHDRAWAL[ x ])
 
-prediction = any;
+prediction = any
 
 if st.button('Make Prediction'):
 
