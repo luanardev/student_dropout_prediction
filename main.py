@@ -5,7 +5,6 @@ import numpy as np
 import load_data
 
 st.header("Student Dropout Prediction")
-
 st.subheader("Please select your features!")
 
 # get user input
@@ -16,21 +15,14 @@ input_withdrawal = st.selectbox('Did you had any withdrawal in the past ? 0=No, 
 prediction = any;
 
 if st.button('Make Prediction'):
-	
-	# convert input into a 2D array
-    inputs = np.expand_dims([input_withdrawal, input_student_type, input_employment], 0)
 
-	# load random forest model
-	model = joblib.load("rfc_model.joblib")
-	
-	# make prediction
+    inputs = np.expand_dims([input_withdrawal, input_student_type, input_employment], 0)
+    model = joblib.load("rfc_model.joblib")
     prediction = model.predict(inputs)
-	
     st.write(f"Predicted Target is {np.squeeze(prediction, -1)}")
 	
 if prediction == 1:
-	st.write("Student is likely to dropout")  
-	
+	st.write("Student is likely to dropout")  	
 elif prediction == 0:
 	st.write("Student is not likely to dropout")
 	
