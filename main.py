@@ -8,7 +8,7 @@ st.subheader("Please select your features!")
 
 #options
 STUDENTTYPE = {1: "MATURED", 2: "GENERIC"}
-EMPLOYMENT = {0: "NO", 2: "YES"}
+EMPLOYMENT = {0: "NO", 1: "YES"}
 WITHDRAWAL = {0: "NO", 1: "YES"}
 
 # get user input
