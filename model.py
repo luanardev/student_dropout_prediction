@@ -90,9 +90,7 @@ rfc_model.fit(x_train_undr, y_train_undr.ravel())
 predictions = rfc_model.predict(x_validation)
 confusion_matrix(y_validation, predictions)
 
-print(classification_report(y_test, predictions))
-
 # save
-#joblib.dump(rfc_model, "rfc_model.joblib")
+joblib.dump(rfc_model, "rfc_model.joblib")
 
 print("Model training completed")
