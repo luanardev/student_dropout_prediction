@@ -7,20 +7,19 @@ st.header("Student Dropout Prediction")
 st.subheader("Please select your features!")
 
 #options
-STUDENTTYPE = {1: "MATURED", 2: "GENERIC"}
-EMPLOYMENT = {0: "NO", 1: "YES"}
-WITHDRAWAL = {0: "NO", 1: "YES"}
-REPEAT = {0: "NO", 1: "YES"}
-MARITALSTATUS = {4: "Male", 2: "Female"}
-GENDER = {2: "Male", 1: "Female"}
-
+STUDENTTYPE = {1: "GENERIC", 2: "MATURED"}
+EMPLOYMENT = {0:"SELF EMPLOYED", 1: "NOT EMPLOYED", 2: "EMPLOYED"}
+WITHDRAWAL = {0: "YES", 1: "NO"}
+REPEAT = {0: "YES", 1: "NO"}
+MARITALSTATUS = {1: "Single", 2: "Married"}
+GENDER = {1: "Male", 2: "Female"}
 
 # get user input
 input_student_type = st.selectbox('What is your student type ?', STUDENTTYPE.keys(), format_func=lambda x:STUDENTTYPE[ x ])
 input_gender = st.selectbox('What is your gender ?', GENDER.keys(), format_func=lambda x:GENDER[ x ])
 input_age = st.text_input('What is your age ?')
 input_marital = st.selectbox('What is your marital status ?', MARITALSTATUS.keys(), format_func=lambda x:MARITALSTATUS[ x ])
-input_employment = st.selectbox('Are you working or doing business ?', EMPLOYMENT.keys(), format_func=lambda x:EMPLOYMENT[ x ])
+input_employment = st.selectbox('What is your employment status ?', EMPLOYMENT.keys(), format_func=lambda x:EMPLOYMENT[ x ])
 input_withdrawal = st.selectbox('Did you withdrawal in the past ?', WITHDRAWAL.keys(), format_func=lambda x:WITHDRAWAL[ x ])
 input_repeat = st.selectbox('Did you repeat in the past ?', REPEAT.keys(), format_func=lambda x:REPEAT[ x ])
 
