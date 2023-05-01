@@ -6,6 +6,7 @@ from imblearn.over_sampling import SMOTE
 from imblearn.under_sampling import RandomUnderSampler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.model_selection import GridSearchCV
@@ -17,8 +18,8 @@ df = pd.read_csv(processed_csv)
 
 # SPLIT DATA FRAME FOR MODEL FITTING
 array = df.values
-X = array[:, 0:3]
-Y = array[:, 3]
+X = array[:, 0:7]
+Y = array[:, 7]
 x_train, x_validation, y_train, y_validation = train_test_split(X, Y, test_size=0.15, random_state=1)
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.15, random_state=1)
 
@@ -89,7 +90,9 @@ rfc_model.fit(x_train_undr, y_train_undr.ravel())
 predictions = rfc_model.predict(x_validation)
 confusion_matrix(y_validation, predictions)
 
+print(classification_report(y_test, predictions))
+
 # save
-joblib.dump(rfc_model, "rfc_model.joblib")
+#joblib.dump(rfc_model, "rfc_model.joblib")
 
 print("Model training completed")
