@@ -27,14 +27,13 @@ def process(csv_file):
         # replace null values with zeros
         # dataset with filled missing values
         df.fillna(0, inplace=True)
-        df._convert(numeric=True)
 
         df = convert_data(df)
 
         # drop columns below correlation below threshold of 0.2
-        df.drop(
-            ['MaritalStatus(MS)', 'RepeatHistory(RH)', 'Gender(GND)', 'Age', 'District(DSRCT)', 'ProgrammeCode(PC)'],
+        df.drop(['District(DSRCT)', 'ProgrammeCode(PC)'],
             axis=1, inplace=True)
+ 
         df.to_csv('processed_data.csv', index=False)
 
         return "processed_data.csv"
