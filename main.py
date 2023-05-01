@@ -38,10 +38,10 @@ if st.button('Make Prediction'):
     
     model = joblib.load("rfc_model.joblib")
     prediction = model.predict(inputs)
-    st.write(f"Predicted Target is {np.squeeze(prediction, -1)}")
+    #st.write(f"Predicted Target is {np.squeeze(prediction, -1)}")
 	
 if prediction == 1:
-	st.write("Student is likely to dropout")  	
+	st.write("STUDENT IS LIKELY TO DROPOUT")  	
 elif prediction == 0:
-	st.write("Student is not likely to dropout")
+	st.write("STUDENT IS NOT LIKELY TO DROPOUT")
 	
