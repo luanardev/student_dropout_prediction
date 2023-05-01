@@ -7,10 +7,10 @@ st.header("Student Dropout Prediction")
 st.subheader("Please select your features!")
 
 #options
-STUDENTTYPE = {1: "GENERIC", 2: "MATURED"}
-EMPLOYMENT = {0:"SELF EMPLOYED", 1: "NOT EMPLOYED", 2: "EMPLOYED"}
-WITHDRAWAL = {0: "YES", 1: "NO"}
-REPEAT = {0: "YES", 1: "NO"}
+STUDENTTYPE = {1: "Generic", 2: "Matured"}
+EMPLOYMENT = {0:"Self Employed", 1: "Not Employed", 2: "Employed"}
+WITHDRAWAL = {0: "Yes", 1: "No"}
+REPEAT = {0: "Yes", 1: "No"}
 MARITALSTATUS = {1: "Single", 2: "Married"}
 GENDER = {1: "Male", 2: "Female"}
 
